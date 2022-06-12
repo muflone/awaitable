@@ -19,7 +19,7 @@
 ##
 
 APP_NAME = 'Awaitable'
-APP_VERSION = '0.1.0'
+APP_VERSION = '0.2.0'
 APP_DESCRIPTION = 'A decorator to asynchronously execute synchronous functions'
 APP_ID = 'awaitable.muflone.com'
 APP_URL = 'https://www.muflone.com/awaitable/'
