@@ -1,5 +1,8 @@
 # Awaitable
 
+[![Travis CI Build Status](https://img.shields.io/travis/com/muflone/awaitable/master.svg)](https://www.travis-ci.com/github/muflone/awaitable)
+[![CircleCI Build Status](https://img.shields.io/circleci/project/github/muflone/awaitable/master.svg)](https://circleci.com/gh/muflone/awaitable)
+
 **Description:** A decorator to asynchronously execute synchronous functions
 
 **Copyright:** 2022 Fabio Castelli (Muflone) <muflone@muflone.com>
