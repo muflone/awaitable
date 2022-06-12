@@ -20,3 +20,7 @@ Awaitable is a small decorator to asynchronously execute synchronous functions.
 # System Requirements
 
 * Python 3.x
+
+# Usage
+
+Please see the **samples** folders for some usage examples.
