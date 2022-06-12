@@ -25,4 +25,25 @@ Awaitable is a small decorator to asynchronously execute synchronous functions.
 
 # Usage
 
-Please see the **samples** folders for some usage examples.
+You can decorate a synchronous routine using `@awaitable.awaitable` to make it
+awaitable and `awaitable.Asyncio.Gather` to process some tasks using asyncio:
+
+```python
+import awaitable
+
+@awaitable.awaitable
+def do_something():
+    # process a single task
+    return
+
+async def process(count):
+    # execute some workers
+    tasks = awaitable.AsyncioGather()
+    for i in range(count):
+        tasks.add(do_something())
+    await tasks.run()
+
+awaitable.run_awaitable(func=process, count=10)
+```
+
+Please see the **samples** folders for some others usage examples.
