@@ -20,9 +20,10 @@
 
 import asyncio
 import functools
+import typing
 
 
-def awaitable(func):
+def awaitable(func: typing.Callable):
     """
     Decorates a synchronous function to run it in asynchronous
     :param func: function to decorate

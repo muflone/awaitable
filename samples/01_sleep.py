@@ -21,12 +21,14 @@
 import logging
 import time
 import random
+import typing
 
 import awaitable
 
 
 @awaitable.awaitable
-def do_process(name, t) -> None:
+def do_process(name: str,
+               t: typing.Union[int, float]) -> None:
     """
     Await some time before returning
     :param name: task name
@@ -40,7 +42,7 @@ def do_process(name, t) -> None:
                  f'in {time.time() - starting_time:.2f} seconds')
 
 
-async def process(count) -> None:
+async def process(count: int) -> None:
     """
     Run some processes asynchronously
     Each process will await a random number of seconds
@@ -51,8 +53,8 @@ async def process(count) -> None:
     logging.info(f'Running {count} processes')
     tasks = []
     for i in range(count):
-        tasks.append(do_process(f'task_{len(tasks) + 1}',
-                                random.randint(0, count)))
+        tasks.append(do_process(name=f'task_{len(tasks) + 1}',
+                                t=random.randint(0, count)))
     logging.info(f'Starting to process {len(tasks)} tasks')
     await awaitable.asyncio.gather(*tasks)
 
