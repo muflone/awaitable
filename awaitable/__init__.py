@@ -21,4 +21,5 @@
 import asyncio                                                     # noqa: F401
 
 from .awaitable import awaitable, run_awaitable                    # noqa: F401
+from .asyncio_gather import AsyncioGather                          # noqa: F401
 from .constants import APP_VERSION as __version__                  # noqa: F401

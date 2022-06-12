@@ -51,12 +51,12 @@ async def process(count: int) -> None:
     :return: None
     """
     logging.info(f'Running {count} processes')
-    tasks = []
+    tasks = awaitable.AsyncioGather()
     for i in range(count):
-        tasks.append(do_process(name=f'task_{len(tasks) + 1}',
-                                t=random.randint(0, count)))
+        tasks.add(do_process(name=f'task_{tasks.count() + 1}',
+                             t=random.randint(0, count)))
     logging.info(f'Starting to process {len(tasks)} tasks')
-    await awaitable.asyncio.gather(*tasks)
+    await tasks.run()
 
 
 if __name__ == '__main__':
