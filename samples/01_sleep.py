@@ -68,7 +68,8 @@ if __name__ == '__main__':
                                '%(funcName)-30s '
                                '%(message)s')
     starting_time = time.time()
-    awaitable.asyncio.run(process(10))
+    awaitable.run_awaitable(func=process,
+                            count=10)
     ending_time = time.time()
     logging.info(f'Operation completed in {ending_time - starting_time:.2f} '
                  'seconds')

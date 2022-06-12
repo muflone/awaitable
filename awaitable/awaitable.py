@@ -36,3 +36,10 @@ def awaitable(func: typing.Callable):
         pfunc = functools.partial(func, *args, **kwargs)
         return await loop.run_in_executor(executor, pfunc)
     return run
+
+
+def run_awaitable(func: typing.Callable, *args, **kwargs) -> None:
+    """
+    Execute an awaitable function with arguments
+    """
+    return asyncio.run(func(*args, **kwargs))
