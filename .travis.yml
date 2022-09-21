@@ -5,7 +5,7 @@ install:
   - pip install -r requirements_ci.txt
 script:
   - python -m compileall awaitable
-  - pycodestyle awaitable
+  - python -m pycodestyle awaitable
   - python -m flake8 awaitable
   - python -m build --outdir=dist .
   - python -m pip install --verbose dist/*.whl
