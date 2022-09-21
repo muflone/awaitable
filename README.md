@@ -26,7 +26,7 @@ Awaitable is a small decorator to asynchronously execute synchronous functions.
 # Usage
 
 You can decorate a synchronous routine using `@awaitable.awaitable` to make it
-awaitable and `awaitable.Asyncio.Gather` to process some tasks using asyncio:
+awaitable and `awaitable.AsyncioGather` to process some tasks using asyncio:
 
 ```python
 import awaitable
