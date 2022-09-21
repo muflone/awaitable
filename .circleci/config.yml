@@ -28,7 +28,11 @@ jobs:
           command: |
             . venv/bin/activate
             python -m compileall awaitable
-            pycodestyle awaitable
+            python -m pycodestyle awaitable
             python -m flake8 awaitable
-            python setup.py install --optimize=1 --root=build
-            ls -laR build
+            python -m build --outdir=dist .
+            python -m pip install --verbose dist/*.whl
+            python -m pip list
+            python -m pip freeze
+            ls -laR .
+            python -m pip uninstall --yes --verbose awaitable
