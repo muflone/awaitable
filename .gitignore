@@ -1,4 +1,4 @@
-# Development files
+# Ignore .idea folder for Jetbrains IDEs
 .idea/
 
 # Ignore Python compiled files
@@ -9,4 +9,3 @@ __pycache__/
 /build/
 /dist/
 *.egg-info/
-
