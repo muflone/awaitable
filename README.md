@@ -13,7 +13,7 @@
 
 **Source code:** https://github.com/muflone/awaitable
 
-**Documentation:** https://www.muflone.com/awaitable/
+**Documentation:** http://www.muflone.com/awaitable/
 
 # Description
 
